@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="Calculator">
+        <h2>Calculator</h2>
+        <input type="text" id="display" readonly>
+        <div class="button-container">
+        <button class="button"onclick="current='';
+        document.querySelector('#display').value=current;">C</button>
+        <button class="button" onclick="current=current+'1';
+        document.querySelector('#display').value=current;">1</button>
+        <button class="button"onclick="current=current+'2';
+        document.querySelector('#display').value=current;">2</button>
+        <button class="button"onclick="current=current+'3';
+        document.querySelector('#display').value=current;">3</button>
+        <button class="button"onclick="current=current+'+';
+        document.querySelector('#display').value=current;">+</button>
+        <button class="button"onclick="current=current+'4';
+        document.querySelector('#display').value=current;">4</button>
+        <button class="button"onclick="current=current+'5';
+        document.querySelector('#display').value=current;">5</button>
+        <button class="button"onclick="current=current+'6';
+        document.querySelector('#display').value=current;">6</button>
+        <button class="button"onclick="current=current+'-';
+        document.querySelector('#display').value=current;">-</button>
+        <button class="button"onclick="current=current+'7';
+        document.querySelector('#display').value=current;">7</button>
+        <button class="button"onclick="current=current+'8';
+        document.querySelector('#display').value=current;">8</button>
+        <button class="button"onclick="current=current+'9';
+        document.querySelector('#display').value=current;">9</button>
+        <button class="button"onclick="current=current+'/';
+        document.querySelector('#display').value=current;">/</button>
+        <button class="button"onclick="current=current+'*';
+        document.querySelector('#display').value=current;">*</button>
+        <button class="button"onclick="current=current+'.';
+        document.querySelector('#display').value=current;">.</button>
+        <button class="button-equal"onclick="
+        let result = eval(current);
+        current = result;
+        document.querySelector('#display').value=current;">=</button>
+        
+        <button class="button"onclick="current=current+'0';
+        document.querySelector('#display').value=current;">0</button>
+        
+        <!-- sin button -->
+        <button class="button" onclick="
+        current = Math.sin(parseFloat(current) * Math.PI / 180);
+        document.querySelector('#display').value = current;">sin</button>
+
+        <!-- cos button -->
+        <button class="button" onclick="
+        current = Math.cos(parseFloat(current) * Math.PI / 180);
+        document.querySelector('#display').value = current;">cos</button>
+
+        <!-- tan button -->
+        <button class="button" onclick="
+        current = Math.tan(parseFloat(current) * Math.PI / 180);
+        document.querySelector('#display').value = current;">tan</button>
+
+        <!-- cot button -->
+        <button class="button" onclick="
+        let rad1 = parseFloat(current) * Math.PI / 180;
+        current = 1 / Math.tan(rad1);
+        document.querySelector('#display').value = current;">cot</button>
+
+        <!-- sec button -->
+        <button class="button" onclick="
+        let rad2 = parseFloat(current) * Math.PI / 180;
+        current = 1 / Math.cos(rad2);
+        document.querySelector('#display').value = current;">sec</button>
+
+        <!-- cosec button -->
+        <button class="button" onclick="
+        let rad3 = parseFloat(current) * Math.PI / 180;
+        current = 1 / Math.sin(rad3);
+        document.querySelector('#display').value = current;">cosec</button>
+        </div>
+    </div>
+    <marquee>Enjoy it.....😍😁</marquee>
+    <script>
+        let current = '';
+        document.querySelector('#display').value = current;
+    </script>
+</body>
+</html>
